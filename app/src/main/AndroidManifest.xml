@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.vondear.tools">
+    package="com.vondear.tools">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -91,6 +91,8 @@
         <activity android:name=".activity.ActivityCobweb">
         </activity>
         <activity android:name=".activity.ActivityRxRotateBar">
+        </activity>
+        <activity android:name=".activity.SwipeActivity">
         </activity>
     </application>
 

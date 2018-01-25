@@ -64,7 +64,13 @@ public class ActivityContact extends ActivityBase {
                 }.getType();
                 Gson gson = new Gson();
                 final List<ModelContactCity> list = gson.fromJson(ModelContactCity.DATA, listType);
+
                 Collections.sort(list, new ComparatorLetter());
+
+                for (int i = 0;i<12;i++){
+                    list.remove(0);
+                }
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

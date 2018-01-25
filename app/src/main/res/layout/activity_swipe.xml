@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <com.vondear.rxtools.view.RxTitle
+      android:id="@+id/rx_title"
+      android:layout_width="match_parent"
+      android:layout_height="55dp"
+      android:background="@color/blue"
+      app:title="联系人侧边栏快速导航"
+      app:titleColor="@color/white"
+      />
+
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context=".activity.SwipeActivity"
+      >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <FrameLayout
+          android:id="@+id/recycler_view_container"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/state_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+          <ImageView
+              android:id="@+id/iv_state"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/tv_state_tips"
+              android:layout_centerHorizontal="true"
+              android:src="@mipmap/ic_launcher"
+              />
+          <TextView
+              android:id="@+id/tv_state_tips"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:layout_marginTop="8dp"
+              android:text="empty"
+              />
+        </RelativeLayout>
+      </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+  </RelativeLayout>
+</LinearLayout>

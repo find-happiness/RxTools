@@ -289,7 +289,7 @@ public class WaveSideBarView extends View {
 
     private void drawBallPath(Canvas canvas) {
         //x轴的移动路径
-        mBallCentreX = (mWidth + mBallRadius) - (2.0f * mRadius + 2.0f * mBallRadius) * mRatio;
+        mBallCentreX = (mWidth + mBallRadius) - (3.0f * mRadius + 3.0f * mBallRadius) * mRatio;
 
         mBallPath.reset();
         mBallPath.addCircle(mBallCentreX, mCenterY, mBallRadius, Path.Direction.CW);
